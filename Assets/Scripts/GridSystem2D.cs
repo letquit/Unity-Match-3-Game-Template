@@ -16,12 +16,12 @@ namespace Match3
 
         public event Action<int, int, T> OnValueChangeEvent;
 
-        public static GridSystem2D<T> VerticalGrid(int width, int height, float cellSize, Vector3 origin,bool debug)
+        public static GridSystem2D<T> VerticalGrid(int width, int height, float cellSize, Vector3 origin,bool debug = false)
         {
             return new GridSystem2D<T>(width, height, cellSize, origin, new VerticalConverter(), debug);
         }
         
-        public static GridSystem2D<T> HorizontalGrid(int width, int height, float cellSize, Vector3 origin,bool debug)
+        public static GridSystem2D<T> HorizontalGrid(int width, int height, float cellSize, Vector3 origin,bool debug = false)
         {
             return new GridSystem2D<T>(width, height, cellSize, origin, new HorizontalConverter(), debug);
         }
